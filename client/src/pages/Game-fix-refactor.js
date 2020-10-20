@@ -2,159 +2,44 @@ import React from "react";
 
 function Game() {
 
-  let time = 15;
-  const Timer = () => {
-    setInterval(function countdown() {
-      time -= 1;
-      if (time === 0) {
-        //close out question
-      }
-    }, 1000);
-  };
-  return (
-    <div className="wrapper">
-      <div className="game-wrapper">
-        <button className="button">Category</button>
-        <button className="button" data-toggle="modal">
-          Category
-        </button>
-        <button className="button" data-toggle="modal">
-          Category
-        </button>
-        <button className="button" data-toggle="modal">
-          Category
-        </button>
-)
   var player1 = undefined;
   var player2 = undefined;
   var player3 = undefined;
   return (
-    <div className="wrapper">
-      <div className="game-wrapper">
+    <div className="wrapper">{/* Start JSX-Wrapper */}
+      <div className="game-wrapper">{/* Start Game-Wrapper */}
+        {/*Do not reformat! Too many lines of code to scroll through!*/}
 
-        <button className='title-category' data-toggle="modal"  >Category</button>
-        <button className='title-category' data-toggle="modal"  >Category</button>
-        <button className='title-category' data-toggle="modal"  >Category</button>
-        <button className='title-category' data-toggle="modal"  >Category</button>
+        {/* Top of Game Board */}
+        <button className='title-category' data-toggle="modal">Category</button>
+        <button className='title-category' data-toggle="modal">Category</button>
+        <button className='title-category' data-toggle="modal">Category</button>
+        <button className='title-category' data-toggle="modal">Category</button>
 
+        {/* 100 Points */}
+        <button className="game-button" data-toggle="modal" data-target="#exampleModal">100</button>
+        <button className="game-button" data-toggle="modal" data-target="#exampleModal">100</button>
+        <button className="game-button" data-toggle="modal" data-target="#exampleModal">100</button>
+        <button className="game-button" data-toggle="modal" data-target="#exampleModal">100</button>
 
+        {/* 300 Points */}
+        <button className="game-button" data-toggle="modal" data-target="#exampleModal">300</button>
+        <button className="game-button" data-toggle="modal" data-target="#exampleModal">300</button>
+        <button className="game-button" data-toggle="modal" data-target="#exampleModal">300</button>
+        <button className="game-button" data-toggle="modal" data-target="#exampleModal">300</button>
 
+        {/* 600 Points */}
+        <button className="game-button" data-toggle="modal" data-target="#exampleModal">600</button>
+        <button className="game-button" data-toggle="modal" data-target="#exampleModal">600</button>
+        <button className="game-button" data-toggle="modal" data-target="#exampleModal">600</button>
+        <button className="game-button" data-toggle="modal" data-target="#exampleModal">600</button>
 
-        <button
-          className="game-button"
-          data-toggle="modal"
-          data-target="#exampleModal"
-        >
-          100
-        </button>
-        <button
-          className="game-button"
-          data-toggle="modal"
-          data-target="#exampleModal"
-        >
-          100
-        </button>
-        <button
-          className="game-button"
-          data-toggle="modal"
-          data-target="#exampleModal"
-        >
-          100
-        </button>
-        <button
-          className="game-button"
-          data-toggle="modal"
-          data-target="#exampleModal"
-        >
-          100
-        </button>
-
-        <button
-          className="game-button"
-          data-toggle="modal"
-          data-target="#exampleModal"
-        >
-          300
-        </button>
-        <button
-          className="game-button"
-          data-toggle="modal"
-          data-target="#exampleModal"
-        >
-          300
-        </button>
-        <button
-          className="game-button"
-          data-toggle="modal"
-          data-target="#exampleModal"
-        >
-          300
-        </button>
-        <button
-          className="game-button"
-          data-toggle="modal"
-          data-target="#exampleModal"
-        >
-          300
-        </button>
-
-        <button
-          className="game-button"
-          data-toggle="modal"
-          data-target="#exampleModal"
-        >
-          600
-        </button>
-        <button
-          className="game-button"
-          data-toggle="modal"
-          data-target="#exampleModal"
-        >
-          600
-        </button>
-        <button
-          className="game-button"
-          data-toggle="modal"
-          data-target="#exampleModal"
-        >
-          600
-        </button>
-        <button
-          className="game-button"
-          data-toggle="modal"
-          data-target="#exampleModal"
-        >
-          600
-        </button>
-
-        <button
-          className="game-button"
-          data-toggle="modal"
-          data-target="#exampleModal"
-        >
-          1000
-        </button>
-        <button
-          className="game-button"
-          data-toggle="modal"
-          data-target="#exampleModal"
-        >
-          1000
-        </button>
-        <button
-          className="game-button"
-          data-toggle="modal"
-          data-target="#exampleModal"
-        >
-          1000
-        </button>
-        <button
-          className="game-button"
-          data-toggle="modal"
-          data-target="#exampleModal"
-        >
-          1000
-        </button>
+        {/* 1000 Points */}
+        <button className="game-button" data-toggle="modal" data-target="#exampleModal">1000</button>
+        <button className="game-button" data-toggle="modal" data-target="#exampleModal">1000</button>
+        <button className="game-button" data-toggle="modal" data-target="#exampleModal">1000</button>
+        <button className="game-button" data-toggle="modal" data-target="#exampleModal">1000</button>
+      
       </div>
 
 
