@@ -40,117 +40,12 @@ function Game() {
         <button className="game-button" data-toggle="modal" data-target="#exampleModal">1000</button>
         <button className="game-button" data-toggle="modal" data-target="#exampleModal">1000</button>
       
-      </div>
+      </div>{/* END Game-Wrapper */}
 
 
 
     {/*For the Give Up Button can put a popup that says "are you sure you want to give up?"*/}
 
-      <div class="card-group">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Player</h5>
-
-            <p class="card-text">Score:</p>
-            <button type="button" className="btn btn-danger">
-              Give Up
-            </button>
-
-            <p class="card-text">Total Score:</p>
-            <button type="button" className="btn btn-danger" >Give Up</button>
-
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Player</h5>
-
-            <p class="card-text">Score:</p>
-            <button type="button" className="btn btn-danger">
-              Give Up
-            </button>
-
-            <p class="card-text">Total Score:</p>
-            <button type="button" className="btn btn-danger" >Give Up</button>
-
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Player</h5>
-
-            <p class="card-text">Score:</p>
-            <button type="button" className="btn btn-danger">
-              Give Up
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <div
-        class="modal fade"
-        id="exampleModal"
-        tabindex="-1"
-        role="dialog"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">
-                Question Title
-              </h5>
-              <button
-                type="button"
-                class="close"
-                data-dismiss="modal"
-                aria-label="Close"
-              >
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">Question Data.</div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-secondary"
-                data-dismiss="modal"
-              >
-                Close
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>{/*<div className="wrapper">*/}
-
-            <p class="card-text">Total Score:</p>
-            <button type="button" className="btn btn-danger" >Give Up</button>
-          </div>
-        </div>
-  );//</div>////Leave this commented out in case we need it.
-
-
-      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Question Title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        Question Data.
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-
-      </div>
-    </div>
-  </div>
-</div>
 
 {/*======================= Score-Board ======================*/}
       {/*A Buttons can turn green when answer correct.*/}
@@ -320,10 +215,8 @@ function Game() {
 {/*<button id="demo" onclick="myFunction()"></button>*/}
 {/*======================= Score-Board END ======================*/}
 
-    //</div>//Leave this commented out in case we need it.
-
-
-  //);//Leave this commented out in case we need it.
+</div>//END JSX Wrapper
+  );
 }
 
 export default Game;
