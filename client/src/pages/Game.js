@@ -6,6 +6,8 @@ function Game() {
   const [questiondata, setQuestion] = useState("");
   const [questiontitle, setTitle] = useState("");
   const [timeLeft, setTimeLeft] = useState(null);
+  const [items, setItems] = useState([{ id: 1, name: "", score: 0 }]);
+
   useEffect(() => {
     if (timeLeft === 0) {
       console.log("TIME LEFT IS 0");

@@ -1,11 +1,12 @@
 const db = require("../models");
 module.exports = {
   findAll: function (req, res) {
-    db.Players.find({ $query: {}, $orderby: { score: 1 } })
-      .then((dbModel) => res.json(dbModel))
-      .catch((err) => {
-        res.status(422).json(err);
-      });
+    console.log("test");
+    // db.Players.find({ $query: {}, $orderby: { score: 1 } })
+    //   .then((dbModel) => res.json(dbModel))
+    //   .catch((err) => {
+    //     res.status(422).json(err);
+    //   });
   },
 
   // findAll: function (req, res) {
