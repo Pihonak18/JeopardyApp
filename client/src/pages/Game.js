@@ -6,6 +6,9 @@ function Game() {
   const [questiondata, setQuestion] = useState("");
   const [questiontitle, setTitle] = useState("");
   const [timeLeft, setTimeLeft] = useState(null);
+   const [answers, setAnswers] = React.useState("");
+  const [items, setItems] = useState([{ id: 1, name: "", score: 0 }]);
+
   useEffect(() => {
     if (timeLeft === 0) {
       console.log("TIME LEFT IS 0");
@@ -42,7 +45,7 @@ function Game() {
           Category
         </button>
 
-        {questions.map(({ id, question, score, title }, index) => (
+        {questions.map(({ id, question, score, title, answers }, index) => (
           <button
             key={id}
             className="game-button"
@@ -53,6 +56,7 @@ function Game() {
               setTimeLeft(15);
               setTitle(title);
               setQuestion(question);
+              setAnswers(answers);
             }}
           >
             {score}
@@ -113,22 +117,27 @@ function Game() {
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
-              <div className="modal-body">{questiondata}</div>
-              <div className="modal-footer">
-                <button
-                  type="button"
-                  className="btn btn-secondary"
-                  data-dismiss="modal"
-                >
-                  Close
-                </button>
+              <div class="modal-body">{questiondata}</div>
+      <button id="bttn" class="button">{answers[0]}</button>
+      <button id="bttn" class="button">{answers[1]}</button>
+      <button id="bttn" class="button">{answers[2]}</button>
+      <button id="bttn" class="button">{answers[3]}</button>
+      
+              <div class="modal-footer">
+                
               </div>
+              
             </div>
           </div>
         </div>
       ) : null}
     </div>
+    
   );
+          
 }
 
+
 export default Game;
+
+
