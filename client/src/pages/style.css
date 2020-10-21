@@ -8,58 +8,67 @@ body {
   background-size: cover;
 }
 
-.game-wrapper{
+.game-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   border: solid 2px;
   border-color: black;
 }
 
-.wrapper{
+.wrapper {
   width: 80%;
   margin: 0 auto;
   padding-top: 80px;
 }
 
-.game-title{
+.game-title {
   background-color: rgba(231, 49, 49, 0.829);
   padding: 0px;
   color: #fff;
-  border:red solid 1px;
-  
-  
+  border: red solid 1px;
 }
 
-.game-button{
+.game-button {
   background-color: darkblue;
   padding: 15px;
   color: #fff;
-  border:black solid 2px;
+  border: black solid 2px;
   height: 125px;
-  
 }
 
-.game-button:hover{
+.game-button:hover {
   transform: scale(1.2);
-  background-color: darkblue
+  background-color: darkblue;
 }
 
-.card-body{
+.card-body {
   text-align: left;
   border: solid 2px;
   border-color: black;
 }
 
-.rules-wrapper{
+.rules-wrapper {
   text-align: center;
 }
-button {
+
+.title-category {
   color: white;
   background-color: black;
   height: 100px;
-  
 }
+
+button {
+  color: white;
+  background-color: black;
+  /*height: 100px;*/
+}
+
 div.card-group {
   margin: 10px;
 }
 
+.playername {
+  color: rgba(243, 181, 255, 0.829);
+  background-color: rgba(51, 255, 0, 0.349);
+  font-weight: 900;
+}
