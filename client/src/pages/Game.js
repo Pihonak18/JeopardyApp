@@ -6,11 +6,6 @@ function Game() {
   const [questiondata, setQuestion] = useState("");
   const [questiontitle, setTitle] = useState("");
   const [timeLeft, setTimeLeft] = useState(null);
-  // const [items, setItems] = useState([
-  //   { name: "", score: 0 },
-  //   { name: "", score: 0 },
-  //   { name: "", score: 0 },
-  // ]);
 
   useEffect(() => {
     if (timeLeft === 0) {
@@ -69,7 +64,7 @@ function Game() {
       <div className="card-group">
         <div className="card">
           <div className="card-body">
-            <h5 className="card-title">Player</h5>
+            <h5 className="card-title">player</h5>
             <p className="card-text">score</p>
             <button type="button" className="btn btn-danger">
               Give Up
@@ -78,7 +73,7 @@ function Game() {
         </div>
         <div className="card">
           <div className="card-body">
-            <h5 className="card-title">Player</h5>
+            <h5 className="card-title">player</h5>
             <p className="card-text">score</p>
             <button type="button" className="btn btn-danger">
               Give Up
@@ -87,7 +82,7 @@ function Game() {
         </div>
         <div className="card">
           <div className="card-body">
-            <h5 className="card-title">Player</h5>
+            <h5 className="card-title">player</h5>
             <p className="card-text">score</p>
             <button type="button" className="btn btn-danger">
               Give Up

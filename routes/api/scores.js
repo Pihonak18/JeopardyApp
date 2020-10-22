@@ -3,8 +3,8 @@ const playersScores = require("../../controllers/playersScores");
 
 router.route("/").get(playersScores.findAll);
 
-//.post(playersScores.create);
+router.post(playersScores.create);
 
-// router.route("/:id").put(playersScores.update);
+router.route("/:id").put(playersScores.update);
 
 module.exports = router;
