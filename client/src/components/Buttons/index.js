@@ -1,8 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import Modal from "./Modal";
-
 import "./style.css";
 
 function Buttons() {
@@ -12,14 +10,12 @@ function Buttons() {
       <Link className="btn btn-outline-primary" to="/">
         Home
       </Link>
+      {/* Add user Modal */}
 
       {/*Play Button*/}
-      {/* <Link to="/game" className="btn btn-outline-info">
+      <Link to="/game" className="btn btn-outline-info">
         Play!
-      </Link> */}
-      <button onClick={Modal()} className="btn btn-outline-info">
-        Play!
-      </button>
+      </Link>
 
       {/*Scores Button*/}
       <Link to="/highscores" className="btn btn-outline-success">
