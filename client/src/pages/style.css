@@ -72,3 +72,14 @@ div.card-group {
   background-color: rgba(51, 255, 0, 0.349);
   font-weight: 900;
 }
+
+.scoreboard-question-btn-led {
+  color: white;
+  background-color: rgb(138, 133, 65, 0.75);
+  min-width: 3rem;
+  min-height: 1rem;
+};
+
+.scoreboard-title {
+  color: rgb(90,89,89);
+};
