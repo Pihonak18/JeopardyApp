@@ -1,3 +1,3 @@
 module.exports = {
-  Players: require("./highscores"),
+  Players: require("./players"),
 };
