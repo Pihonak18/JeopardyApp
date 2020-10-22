@@ -31,6 +31,11 @@ function Game() {
     // when we update it
   }, [timeLeft]);
 
+  //Placeholder Variables need this for detailed scoreboard or react won't compile.
+  var player1 = 0;
+  var player2 = 0;
+  var player3 = 0;
+
   return (
     <div className="wrapper">
       <div className="game-wrapper">
