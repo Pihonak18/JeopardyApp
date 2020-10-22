@@ -7,23 +7,24 @@ function Highscores() {
   // const [formObject, setFormObject] = useState({});
 
   useEffect(() => {
-    loadHighscores();
-  }, []);
-
-  function loadHighscores() {
     API.getScores()
+
       .then((res) => setHighscores(res.data))
+
       .catch((err) => console.log(err));
-  }
+  });
 
   return (
     <div>
       <h1>
         {" "}
         Below is a list of all the highscores and the players who earned them!{" "}
+        {highscores.map((scores) => (
+          <li key={scores.id}>
+            {scores.username} {scores.score}
+          </li>
+        ))}
       </h1>
-
-      {highscores}
     </div>
   );
 }
