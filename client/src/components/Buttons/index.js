@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
 import "./style.css";
 
 function Buttons() {
@@ -10,12 +9,11 @@ function Buttons() {
       <Link className="btn btn-outline-primary" to="/">
         Home
       </Link>
-      {/* Add user Modal */}
 
       {/*Play Button*/}
-      <Link to="/game" className="btn btn-outline-info">
-        Play!
-      </Link>
+      {/* <Link to="/game" className="btn btn-outline-info">
+        Start Game!
+      </Link> */}
 
       {/*Scores Button*/}
       <Link to="/highscores" className="btn btn-outline-success">

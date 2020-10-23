@@ -18,6 +18,6 @@ export default {
   },
   //get all usernames....
   getUserName: function () {
-    return axios.get("/api/highscores");
+    return axios.get("/api/games");
   },
 };
