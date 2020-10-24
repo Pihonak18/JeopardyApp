@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from "react";
 import questions from "./questions.json";
 
-function Game() {
+function Game(props) {
   const [showModal, setShowModal] = useState(true);
   const [questiondata, setQuestion] = useState("");
   const [questiontitle, setTitle] = useState("");
   const [timeLeft, setTimeLeft] = useState(null);
+  const [player, setPlayer] = useState(props.playerName);
 
   const [answers, setAnswers] = React.useState("");
 
   useEffect(() => {
+    console.log(player);
     if (timeLeft === 0) {
       console.log("TIME LEFT IS 0");
       setTimeLeft(null);
@@ -65,24 +67,6 @@ function Game() {
       </div>
 
       <div className="card-group">
-        <div className="card">
-          <div className="card-body">
-            <h5 className="card-title">player</h5>
-            <p className="card-text">score</p>
-            <button type="button" className="btn btn-danger">
-              Give Up
-            </button>
-          </div>
-        </div>
-        <div className="card">
-          <div className="card-body">
-            <h5 className="card-title">player</h5>
-            <p className="card-text">score</p>
-            <button type="button" className="btn btn-danger">
-              Give Up
-            </button>
-          </div>
-        </div>
         <div className="card">
           <div className="card-body">
             <h5 className="card-title">player</h5>

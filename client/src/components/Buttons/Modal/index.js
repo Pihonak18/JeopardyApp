@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Modal() {
   return (
@@ -22,9 +23,9 @@ function Modal() {
         <div class="modal-dialog modal-sm">
           <div class="modal-content">
             <input type="text"></input>
-            <button>
-              <a href="/game">Save player</a>
-            </button>
+            <Link to={{ pathname: `/game`, query: { playerName: "player" } }}>
+              Save player
+            </Link>
           </div>
         </div>
       </div>
