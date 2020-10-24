@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 function Modal() {
+  const [playerName, setPlayerName] = useState("");
   return (
     <div>
       <button
@@ -22,10 +23,14 @@ function Modal() {
       >
         <div class="modal-dialog modal-sm">
           <div class="modal-content">
-            <input type="text"></input>
-            <Link to={{ pathname: `/game`, query: { playerName: "player" } }}>
-              Save player
-            </Link>
+            <input
+              type="text"
+              onChange={(event) => {
+                console.log(event.target.value);
+                setPlayerName(event.target.value);
+              }}
+            ></input>
+            <Link to={{ pathname: `/game`, playerName }}>Save player</Link>
           </div>
         </div>
       </div>

@@ -6,12 +6,12 @@ function Game(props) {
   const [questiondata, setQuestion] = useState("");
   const [questiontitle, setTitle] = useState("");
   const [timeLeft, setTimeLeft] = useState(null);
-  const [player, setPlayer] = useState(props.playerName);
+  const playerName = props.location.playerName;
 
-  const [answers, setAnswers] = React.useState("");
+  const [answers, setAnswers] = useState("");
 
   useEffect(() => {
-    console.log(player);
+    // console.log(playerName);
     if (timeLeft === 0) {
       console.log("TIME LEFT IS 0");
       setTimeLeft(null);
@@ -69,7 +69,7 @@ function Game(props) {
       <div className="card-group">
         <div className="card">
           <div className="card-body">
-            <h5 className="card-title">player</h5>
+            <h5 className="card-title">{playerName}</h5>
             <p className="card-text">score</p>
             <button type="button" className="btn btn-danger">
               Give Up
