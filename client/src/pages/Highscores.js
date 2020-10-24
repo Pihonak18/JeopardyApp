@@ -16,7 +16,7 @@ function Highscores() {
 
   return (
     <div>
-      <h1>
+      <h1 className="highscoresh1">
         {" "}
         Below is a list of all the highscores and the players who earned them!{" "}
         {highscores.map((scores) => (

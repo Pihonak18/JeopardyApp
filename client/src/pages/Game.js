@@ -153,13 +153,76 @@ function Game() {
       If its not declared it will give a failed to compile error
       so for now its commented out.*/}
 
+      <div class="container-fluid mycontainer">
+
       <div class="scoreboard-title">
         <h1 class="scoreboard-title">Detailed Scoreboard</h1>
       </div>
 
       {/*--------------------PLAYER 1 Scoreboard---------------*/}
+
+        <div class="playername">
+          <header>Player 1: {player1} </header>
+        </div>
+
+       {/*Category 1*/}
+       <div class="btn-group">
+          <button class="catagory">Cat1</button>
+          <button class="scoreboard-question-btn-led">1</button>
+          <button class="scoreboard-question-btn-led">2</button>
+          <button class="scoreboard-question-btn-led">3</button>
+          <button class="scoreboard-question-btn-led">4</button>
+        </div>
+      {/*Category 1 ENDS*/}
+
+      {/*Category 2*/}
+       <div class="btn-group">
+          <button class="catagory">Cat2</button>
+          <button class="scoreboard-question-btn-led">1</button>
+          <button class="scoreboard-question-btn-led">2</button>
+          <button class="scoreboard-question-btn-led">3</button>
+          <button class="scoreboard-question-btn-led">4</button>
+        </div>
+      {/*Category 2 ENDS*/}
+
+      {/*Category 3*/}
+       <div class="btn-group">
+          <div class="col-12">
+            <button class="catagory">Cat3</button>
+          </div>
+          <button class="scoreboard-question-btn-led">1</button>
+          <button class="scoreboard-question-btn-led">2</button>
+          <button class="scoreboard-question-btn-led">3</button>
+          <button class="scoreboard-question-btn-led">4</button>
+        </div>
+        {/*Category 3 ENDS*/}
+
+
+      {/*Category 4*/}
+       <div class="btn-group">
+          <button class="catagory">Cat4</button>
+          <button class="scoreboard-question-btn-led">1</button>
+          <button class="scoreboard-question-btn-led">2</button>
+          <button class="scoreboard-question-btn-led">3</button>
+          <button class="scoreboard-question-btn-led">4</button>
+        </div>
+        {/*Category 4 ENDS*/}
+
+      {/*Category 5*/}
+       <div class="btn-group">
+          <button class="catagory">Cat5</button>
+          <button class="scoreboard-question-btn-led">1</button>
+          <button class="scoreboard-question-btn-led">2</button>
+          <button class="scoreboard-question-btn-led">3</button>
+          <button class="scoreboard-question-btn-led">4</button>
+        </div>
+      {/*Category 5*/}
+
+      {/*Player1-ScoreBoard-End*/}
+
+    <div class="row">{/*--------------------PLAYER 2 Scoreboard---------------*/}
       <div class="playername">
-      <header>Player 1: {player1} </header>
+        <header>Player 2: {player2} </header>
       </div>
 
       {/*Category 1*/}
@@ -170,6 +233,7 @@ function Game() {
         <button class="scoreboard-question-btn-led">3</button>
         <button class="scoreboard-question-btn-led">4</button>
       </div>
+      {/*Category 1 ENDS*/}
 
       {/*Category 2*/}
       <div class="btn-group">
@@ -179,6 +243,7 @@ function Game() {
         <button class="scoreboard-question-btn-led">3</button>
         <button class="scoreboard-question-btn-led">4</button>
       </div>
+      {/*Category 2 ENDS*/}
 
       {/*Category 3*/}
       <div class="btn-group">
@@ -188,6 +253,7 @@ function Game() {
         <button class="scoreboard-question-btn-led">3</button>
         <button class="scoreboard-question-btn-led">4</button>
       </div>
+      {/*Category 3 ENDS*/}
 
       {/*Category 4*/}
       <div class="btn-group">
@@ -197,6 +263,7 @@ function Game() {
         <button class="scoreboard-question-btn-led">3</button>
         <button class="scoreboard-question-btn-led">4</button>
       </div>
+      {/*Category 4 ENDS*/}
 
       {/*Category 5*/}
       <div class="btn-group">
@@ -206,60 +273,11 @@ function Game() {
         <button class="scoreboard-question-btn-led">3</button>
         <button class="scoreboard-question-btn-led">4</button>
       </div>
-    {/*Player1-ScoreBoard-End*/}
+      {/*Category 5 ENDS*/}
 
-{/*--------------------PLAYER 2 Scoreboard---------------*/}
-<div class="playername">
-      <header>Player 2: {player2} </header>
-      </div>
+      </div>{/*Player2-ScoreBoard-End*/}
 
-      {/*Category 1*/}
-      <div class="btn-group">
-        <button class="catagory">Cat1</button>
-        <button class="scoreboard-question-btn-led">1</button>
-        <button class="scoreboard-question-btn-led">2</button>
-        <button class="scoreboard-question-btn-led">3</button>
-        <button class="scoreboard-question-btn-led">4</button>
-      </div>
-
-      {/*Category 2*/}
-      <div class="btn-group">
-        <button class="catagory">Cat2</button>
-        <button class="scoreboard-question-btn-led">1</button>
-        <button class="scoreboard-question-btn-led">2</button>
-        <button class="scoreboard-question-btn-led">3</button>
-        <button class="scoreboard-question-btn-led">4</button>
-      </div>
-
-      {/*Category 3*/}
-      <div class="btn-group">
-        <button class="catagory">Cat3</button>
-        <button class="scoreboard-question-btn-led">1</button>
-        <button class="scoreboard-question-btn-led">2</button>
-        <button class="scoreboard-question-btn-led">3</button>
-        <button class="scoreboard-question-btn-led">4</button>
-      </div>
-
-      {/*Category 4*/}
-      <div class="btn-group">
-        <button class="catagory">Cat4</button>
-        <button class="scoreboard-question-btn-led">1</button>
-        <button class="scoreboard-question-btn-led">2</button>
-        <button class="scoreboard-question-btn-led">3</button>
-        <button class="scoreboard-question-btn-led">4</button>
-      </div>
-
-      {/*Category 5*/}
-      <div class="btn-group">
-        <button class="catagory">Cat5</button>
-        <button class="scoreboard-question-btn-led">1</button>
-        <button class="scoreboard-question-btn-led">2</button>
-        <button class="scoreboard-question-btn-led">3</button>
-        <button class="scoreboard-question-btn-led">4</button>
-      </div>
-    {/*Player2-ScoreBoard-End*/}
-
-    {/*--------------------PLAYER 3 Scoreboard---------------*/}
+    <div class="row">{/*--------------------PLAYER 3 Scoreboard---------------*/}
     <div class="playername">
       <header>Player 3: {player3} </header>
       </div>
@@ -308,12 +326,13 @@ function Game() {
         <button class="scoreboard-question-btn-led">3</button>
         <button class="scoreboard-question-btn-led">4</button>
       </div>
-    {/*Player3-ScoreBoard-End*/}
+    </div>{/*Player3-ScoreBoard-End*/}
 
 {/*<button id="demo" onclick="myFunction()"></button>*/}
 {/*======================= Score-Board END ======================*/}
+</div>{/*Bootstrap container ENDS*/}
       {/**/}
-    </div>
+    </div>/*JSX React div ENDS*/
     
   );
           
