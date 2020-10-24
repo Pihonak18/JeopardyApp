@@ -47,9 +47,7 @@ body {
   border-color: black;
 }
 
-.rules-wrapper {
-  text-align: center;
-}
+
 
 .title-category {
   color: white;
@@ -83,3 +81,10 @@ div.card-group {
 .scoreboard-title {
   color: rgb(90,89,89);
 };
+
+
+.highscoresh1{
+  color: rgba(0, 4, 255, 0.5);
+};
+
+

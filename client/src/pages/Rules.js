@@ -1,3 +1,4 @@
+/*
 import React from "react";
 
 function Rules() {
@@ -15,3 +16,4 @@ function Rules() {
 }
 
 export default Rules;
+*/

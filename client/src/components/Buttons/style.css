@@ -8,5 +8,6 @@
 .jumbotron{
   background-image: url("https://image.freepik.com/free-vector/background-mountains-landscape_23-2148267131.jpg");
   background-size:100%;
+  background-size: cover;
   background-repeat: no-repeat;
 }
