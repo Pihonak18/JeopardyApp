@@ -18,9 +18,9 @@ function Game() {
   
   function myFunction(answer) {
 if(answer){
-  
+  alert("hi")
 }
-alert("hi")
+  }
 
   useEffect(() => {
     if (timeLeft === 0) {
@@ -126,14 +126,7 @@ alert("hi")
                 <h5 className="modal-title" id="exampleModalLabel">
                   {timeLeft} {questiontitle}
                 </h5>
-                <button
-                  type="button"
-                  className="close"
-                  data-dismiss="modal"
-                  aria-label="Close"
-                >
-                  <span aria-hidden="true">&times;</span>
-                </button>
+               
               </div>
               <div class="modal-body">{questiondata}</div>
         <button  id='bttn' data-dismiss='modal' onClick={myFunction}>{answers[0]}</button>
