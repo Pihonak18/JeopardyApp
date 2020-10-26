@@ -4,22 +4,27 @@ import { Link } from "react-router-dom";
 
 function Buttons() {
   return (
+    <div class="container buttons-container">
+      {/*Home Button*/}
+      <Link className="btn btn-outline-primary" to="/">
+        Home
+      </Link>
 
-      <div class="container buttons-container">
+      {/*Play Button*/}
+      {/* <Link to="/game" className="btn btn-outline-info">
+        Start Game!
+      </Link> */}
 
-        {/*Home Button*/}
-        <Link className="btn btn-outline-primary" to="/">Home</Link>
+      {/*Scores Button*/}
+      <Link to="/highscores" className="btn btn-outline-success">
+        Scores
+      </Link>
 
-        {/*Play Button*/}
-        <Link to="/game" className="btn btn-outline-info">Play!</Link>
-
-        {/*Scores Button*/}
-        <Link to="/highscores" className="btn btn-outline-success">Scores</Link>
-
-        {/*About Button*/}
-        <Link to="/about"className="btn btn-outline-danger">About</Link>
-
-      </div>/*BootStrap Container ENDS*/
+      {/*About Button*/}
+      <Link to="/about" className="btn btn-outline-danger">
+        About
+      </Link>
+    </div> /*BootStrap Container ENDS*/
     /*BootStrap jumbotron div ENDS*/
   );
 }

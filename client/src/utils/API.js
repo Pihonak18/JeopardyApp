@@ -13,8 +13,4 @@ export default {
   saveScore: function (scoreData) {
     return axios.post("/api/highscores", scoreData);
   },
-  //get all usernames....
-  getUserNames: function () {
-    return axios.get("/api/highscores");
-  },
 };
