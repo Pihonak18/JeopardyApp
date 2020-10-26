@@ -47,9 +47,7 @@ body {
   border-color: black;
 }
 
-.rules-wrapper {
-  text-align: center;
-}
+
 
 .title-category {
   color: white;
@@ -72,3 +70,21 @@ div.card-group {
   background-color: rgba(51, 255, 0, 0.349);
   font-weight: 900;
 }
+
+.scoreboard-question-btn-led {
+  color: white;
+  background-color: rgb(138, 133, 65, 0.75);
+  min-width: 3rem;
+  min-height: 1rem;
+};
+
+.scoreboard-title {
+  color: rgb(90,89,89);
+};
+
+
+.highscoresh1{
+  color: rgba(0, 4, 255, 0.5);
+};
+
+
