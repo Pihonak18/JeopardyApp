@@ -15,7 +15,12 @@ function Game() {
 
    const [answers, setAnswers] = React.useState("");
   const [items, setItems] = useState([{ id: 1, name: "", score: 0 }]);
-
+  
+  function myFunction(answer) {
+if(answer){
+  
+}
+alert("hi")
 
   useEffect(() => {
     if (timeLeft === 0) {
@@ -131,10 +136,10 @@ function Game() {
                 </button>
               </div>
               <div class="modal-body">{questiondata}</div>
-      <button id="bttn" class="button">{answers[0]}</button>
-      <button id="bttn" class="button">{answers[1]}</button>
-      <button id="bttn" class="button">{answers[2]}</button>
-      <button id="bttn" class="button">{answers[3]}</button>
+        <button  id='bttn' data-dismiss='modal' onClick={myFunction}>{answers[0]}</button>
+        <button  id="bttn"  data-dismiss='modal' onClick={myFunction}>{answers[1]}</button>
+        <button  id='bttn'  data-dismiss='modal' onClick={myFunction}>{answers[2]}</button>
+        <button  id='bttn'  data-dismiss='modal' onClick={myFunction}>{answers[3]}</button>
       
               <div class="modal-footer">
                 
