@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 import questions from "./questions.json";
 
 function Game(props) {
@@ -7,11 +8,15 @@ function Game(props) {
   const [questiontitle, setTitle] = useState("");
   const [timeLeft, setTimeLeft] = useState(null);
   const playerName = props.location.playerName;
+  const [score, setScore] = useState(0);
 
-  const [answers, setAnswers] = useState("");
+  const [answers, setAnswers] = useState([]);
+  const [correctAnswer, setCorrectAnswer] = useState("");
+  const [questionScore, setQuestionScore] = useState(0);
 
-  const [answers, setAnswers] = useState("");
+  const [questionCount, setCount] = useState(0);
 
+  const history = useHistory();
   useEffect(() => {
     // console.log(playerName);
     if (timeLeft === 0) {
@@ -49,30 +54,34 @@ function Game(props) {
           Category
         </button>
 
-        {questions.map(({ id, question, score, title, answers }, index) => (
-          <button
-            key={id}
-            className="game-button"
-            data-toggle="modal"
-            data-target="#exampleModal"
-            // disabled={wasClicked}
-            onClick={() => {
-              setTimeLeft(15);
-              setTitle(title);
-              setQuestion(question);
-              setAnswers(answers);
-            }}
-          >
-            {score}
-          </button>
-        ))}
+        {questions.map(
+          ({ id, question, title, answers, answer, score }, index) => (
+            <button
+              key={id}
+              className="game-button"
+              data-toggle="modal"
+              data-target="#exampleModal"
+              // disabled={wasClicked}
+              onClick={() => {
+                setTimeLeft(15);
+                setTitle(title);
+                setQuestion(question);
+                setAnswers(answers);
+                setCorrectAnswer(answer);
+                setQuestionScore(score);
+              }}
+            >
+              {score}
+            </button>
+          )
+        )}
       </div>
 
       <div className="card-group">
         <div className="card">
           <div className="card-body">
             <h5 className="card-title">{playerName}</h5>
-            <p className="card-text">score</p>
+            <p className="card-text">{score}</p>
             <button type="button" className="btn btn-danger">
               Give Up
             </button>
@@ -105,33 +114,25 @@ function Game(props) {
               </div>
               <div class="modal-body">{questiondata}</div>
 
-              <button id="bttn" class="button">
-                {answers[0]}
-              </button>
-              <button id="bttn" class="button">
-                {answers[1]}
-              </button>
-              <button id="bttn" class="button">
-                {answers[2]}
-              </button>
-              <button id="bttn" class="button">
-                {answers[3]}
-              </button>
-
-              <div class="modal-footer"></div>
-
-              <button id="bttn" data-dismiss="modal" onClick={myFunction}>
-                {answers[0]}
-              </button>
-              <button id="bttn" data-dismiss="modal" onClick={myFunction}>
-                {answers[1]}
-              </button>
-              <button id="bttn" data-dismiss="modal" onClick={myFunction}>
-                {answers[2]}
-              </button>
-              <button id="bttn" data-dismiss="modal" onClick={myFunction}>
-                {answers[3]}
-              </button>
+              {answers.map((answer) => (
+                <button
+                  key={answer}
+                  data-dismiss={answer === correctAnswer ? "modal" : null}
+                  aria-label={answer === correctAnswer ? "modal" : null}
+                  onClick={() => {
+                    if (answer === correctAnswer) {
+                      setShowModal(false);
+                      setScore(questionScore + score);
+                    }
+                    setCount(questionCount + 1);
+                    if (questionCount === questions.length) {
+                      history.push("/highscores");
+                    }
+                  }}
+                >
+                  {answer}
+                </button>
+              ))}
 
               <div class="modal-footer"></div>
             </div>

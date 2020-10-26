@@ -12,6 +12,9 @@ function Highscores() {
       .catch((err) => console.log(err));
   });
 
+  const saveScore = () => {
+    API.saveScore().catch((err) => console.log(err));
+  };
   return (
     <div>
       <h1 className="highscoresh1">
@@ -23,6 +26,13 @@ function Highscores() {
           </li>
         ))}
       </h1>
+      <form>
+        <input type="text" placeholder="username" />
+        <input type="text" placeholder="score" />
+        <button type="submit" onClick={saveScore}>
+          Save
+        </button>
+      </form>
     </div>
   );
 }
