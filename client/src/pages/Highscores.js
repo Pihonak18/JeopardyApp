@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Input, FormBtn } from "../components/Buttons/Form";
 import API from "../utils/API";
 
 function Highscores() {
   const [highscores, setHighscores] = useState([]);
-  // const [formObject, setFormObject] = useState({});
 
   useEffect(() => {
     API.getScores()
@@ -14,6 +12,9 @@ function Highscores() {
       .catch((err) => console.log(err));
   });
 
+  const saveScore = () => {
+    API.saveScore().catch((err) => console.log(err));
+  };
   return (
     <div>
       <h1 className="highscoresh1">
@@ -25,6 +26,13 @@ function Highscores() {
           </li>
         ))}
       </h1>
+      <form>
+        <input type="text" placeholder="username" />
+        <input type="text" placeholder="score" />
+        <button type="submit" onClick={saveScore}>
+          Save
+        </button>
+      </form>
     </div>
   );
 }

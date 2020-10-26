@@ -11,9 +11,9 @@ function Buttons() {
       </Link>
 
       {/*Play Button*/}
-      <Link to="/game" className="btn btn-outline-info">
-        Play!
-      </Link>
+      {/* <Link to="/game" className="btn btn-outline-info">
+        Start Game!
+      </Link> */}
 
       {/*Scores Button*/}
       <Link to="/highscores" className="btn btn-outline-success">

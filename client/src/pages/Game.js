@@ -1,28 +1,29 @@
 import React, { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 import questions from "./questions.json";
 
-function Game() {
+function Game(props) {
   const [showModal, setShowModal] = useState(true);
   const [questiondata, setQuestion] = useState("");
   const [questiontitle, setTitle] = useState("");
   const [timeLeft, setTimeLeft] = useState(null);
+  const playerName = props.location.playerName;
+  const [score, setScore] = useState(0);
 
-  // const [items, setItems] = useState([
-  //   { name: "", score: 0 },
-  //   { name: "", score: 0 },
-  //   { name: "", score: 0 },
-  // ]);
+  const [answers, setAnswers] = useState([]);
+  const [correctAnswer, setCorrectAnswer] = useState("");
+  const [questionScore, setQuestionScore] = useState(0);
 
-   const [answers, setAnswers] = React.useState("");
-  const [items, setItems] = useState([{ id: 1, name: "", score: 0 }]);
+
+  const [questionCount, setCount] = useState(0);
+
+
   
-  function myFunction(answer) {
-if(answer){
-  alert("hi")
-}
-  }
 
+
+  const history = useHistory();
   useEffect(() => {
+    // console.log(playerName);
     if (timeLeft === 0) {
       console.log("TIME LEFT IS 0");
       setTimeLeft(null);
@@ -44,11 +45,6 @@ if(answer){
     // when we update it
   }, [timeLeft]);
 
-  //Placeholder Variables need this for detailed scoreboard or react won't compile.
-  var player1 = 0;
-  var player2 = 0;
-  var player3 = 0;
-
   return (
     <div className="wrapper">
       <div className="game-wrapper">
@@ -63,48 +59,34 @@ if(answer){
           Category
         </button>
 
-        {questions.map(({ id, question, score, title, answers }, index) => (
-          <button
-            key={id}
-            className="game-button"
-            data-toggle="modal"
-            data-target="#exampleModal"
-            // disabled={wasClicked}
-            onClick={() => {
-              setTimeLeft(15);
-              setTitle(title);
-              setQuestion(question);
-              setAnswers(answers);
-            }}
-          >
-            {score}
-          </button>
-        ))}
+        {questions.map(
+          ({ id, question, title, answers, answer, score }, index) => (
+            <button
+              key={id}
+              className="game-button"
+              data-toggle="modal"
+              data-target="#exampleModal"
+              // disabled={wasClicked}
+              onClick={() => {
+                setTimeLeft(15);
+                setTitle(title);
+                setQuestion(question);
+                setAnswers(answers);
+                setCorrectAnswer(answer);
+                setQuestionScore(score);
+              }}
+            >
+              {score}
+            </button>
+          )
+        )}
       </div>
 
       <div className="card-group">
         <div className="card">
           <div className="card-body">
-            <h5 className="card-title">Player</h5>
-            <p className="card-text">score</p>
-            <button type="button" className="btn btn-danger">
-              Give Up
-            </button>
-          </div>
-        </div>
-        <div className="card">
-          <div className="card-body">
-            <h5 className="card-title">Player</h5>
-            <p className="card-text">score</p>
-            <button type="button" className="btn btn-danger">
-              Give Up
-            </button>
-          </div>
-        </div>
-        <div className="card">
-          <div className="card-body">
-            <h5 className="card-title">Player</h5>
-            <p className="card-text">score</p>
+            <h5 className="card-title">{playerName}</h5>
+            <p className="card-text">{score}</p>
             <button type="button" className="btn btn-danger">
               Give Up
             </button>
@@ -129,214 +111,34 @@ if(answer){
                
               </div>
               <div class="modal-body">{questiondata}</div>
-        <button  id='bttn' data-dismiss='modal' onClick={myFunction}>{answers[0]}</button>
-        <button  id="bttn"  data-dismiss='modal' onClick={myFunction}>{answers[1]}</button>
-        <button  id='bttn'  data-dismiss='modal' onClick={myFunction}>{answers[2]}</button>
-        <button  id='bttn'  data-dismiss='modal' onClick={myFunction}>{answers[3]}</button>
-      
-              <div class="modal-footer">
-                
-              </div>
-              
+
+              {answers.map((answer) => (
+                <button
+                  key={answer}
+                  data-dismiss={answer === correctAnswer ? "modal" : null}
+                  aria-label={answer === correctAnswer ? "modal" : null}
+                  onClick={() => {
+                    if (answer === correctAnswer) {
+                      setShowModal(false);
+                      setScore(questionScore + score);
+                    }
+                    setCount(questionCount + 1);
+                    if (questionCount === questions.length) {
+                      history.push("/highscores");
+                    }
+                  }}
+                >
+                  {answer}
+                </button>
+              ))}
+
+              <div class="modal-footer"></div>
             </div>
           </div>
         </div>
       ) : null}
-      {/**/}
-      {/*======================= Score-Board ======================*/}
-      {/*A Buttons can turn green when answer correct.*/}
-      {/*A Button can turn red when answer incorrect.*/}
-      {/*We Can have 1 row per player. 1 colum per question*/}
-      {/*  {player1} Inside it needs to be declared.
-      If its not declared it will give a failed to compile error
-      so for now its commented out.*/}
-
-      <div class="container-fluid mycontainer">
-
-      <div class="scoreboard-title">
-        <h1 class="scoreboard-title">Detailed Scoreboard</h1>
-      </div>
-
-      {/*--------------------PLAYER 1 Scoreboard---------------*/}
-
-        <div class="playername">
-          <header>Player 1: {player1} </header>
-        </div>
-
-       {/*Category 1*/}
-       <div class="btn-group">
-          <button class="catagory">Cat1</button>
-          <button class="scoreboard-question-btn-led">1</button>
-          <button class="scoreboard-question-btn-led">2</button>
-          <button class="scoreboard-question-btn-led">3</button>
-          <button class="scoreboard-question-btn-led">4</button>
-        </div>
-      {/*Category 1 ENDS*/}
-
-      {/*Category 2*/}
-       <div class="btn-group">
-          <button class="catagory">Cat2</button>
-          <button class="scoreboard-question-btn-led">1</button>
-          <button class="scoreboard-question-btn-led">2</button>
-          <button class="scoreboard-question-btn-led">3</button>
-          <button class="scoreboard-question-btn-led">4</button>
-        </div>
-      {/*Category 2 ENDS*/}
-
-      {/*Category 3*/}
-       <div class="btn-group">
-          <div class="col-12">
-            <button class="catagory">Cat3</button>
-          </div>
-          <button class="scoreboard-question-btn-led">1</button>
-          <button class="scoreboard-question-btn-led">2</button>
-          <button class="scoreboard-question-btn-led">3</button>
-          <button class="scoreboard-question-btn-led">4</button>
-        </div>
-        {/*Category 3 ENDS*/}
-
-
-      {/*Category 4*/}
-       <div class="btn-group">
-          <button class="catagory">Cat4</button>
-          <button class="scoreboard-question-btn-led">1</button>
-          <button class="scoreboard-question-btn-led">2</button>
-          <button class="scoreboard-question-btn-led">3</button>
-          <button class="scoreboard-question-btn-led">4</button>
-        </div>
-        {/*Category 4 ENDS*/}
-
-      {/*Category 5*/}
-       <div class="btn-group">
-          <button class="catagory">Cat5</button>
-          <button class="scoreboard-question-btn-led">1</button>
-          <button class="scoreboard-question-btn-led">2</button>
-          <button class="scoreboard-question-btn-led">3</button>
-          <button class="scoreboard-question-btn-led">4</button>
-        </div>
-      {/*Category 5*/}
-
-      {/*Player1-ScoreBoard-End*/}
-
-    <div class="row">{/*--------------------PLAYER 2 Scoreboard---------------*/}
-      <div class="playername">
-        <header>Player 2: {player2} </header>
-      </div>
-
-      {/*Category 1*/}
-      <div class="btn-group">
-        <button class="catagory">Cat1</button>
-        <button class="scoreboard-question-btn-led">1</button>
-        <button class="scoreboard-question-btn-led">2</button>
-        <button class="scoreboard-question-btn-led">3</button>
-        <button class="scoreboard-question-btn-led">4</button>
-      </div>
-      {/*Category 1 ENDS*/}
-
-      {/*Category 2*/}
-      <div class="btn-group">
-        <button class="catagory">Cat2</button>
-        <button class="scoreboard-question-btn-led">1</button>
-        <button class="scoreboard-question-btn-led">2</button>
-        <button class="scoreboard-question-btn-led">3</button>
-        <button class="scoreboard-question-btn-led">4</button>
-      </div>
-      {/*Category 2 ENDS*/}
-
-      {/*Category 3*/}
-      <div class="btn-group">
-        <button class="catagory">Cat3</button>
-        <button class="scoreboard-question-btn-led">1</button>
-        <button class="scoreboard-question-btn-led">2</button>
-        <button class="scoreboard-question-btn-led">3</button>
-        <button class="scoreboard-question-btn-led">4</button>
-      </div>
-      {/*Category 3 ENDS*/}
-
-      {/*Category 4*/}
-      <div class="btn-group">
-        <button class="catagory">Cat4</button>
-        <button class="scoreboard-question-btn-led">1</button>
-        <button class="scoreboard-question-btn-led">2</button>
-        <button class="scoreboard-question-btn-led">3</button>
-        <button class="scoreboard-question-btn-led">4</button>
-      </div>
-      {/*Category 4 ENDS*/}
-
-      {/*Category 5*/}
-      <div class="btn-group">
-        <button class="catagory">Cat5</button>
-        <button class="scoreboard-question-btn-led">1</button>
-        <button class="scoreboard-question-btn-led">2</button>
-        <button class="scoreboard-question-btn-led">3</button>
-        <button class="scoreboard-question-btn-led">4</button>
-      </div>
-      {/*Category 5 ENDS*/}
-
-      </div>{/*Player2-ScoreBoard-End*/}
-
-    <div class="row">{/*--------------------PLAYER 3 Scoreboard---------------*/}
-    <div class="playername">
-      <header>Player 3: {player3} </header>
-      </div>
-
-      {/*Category 1*/}
-      <div class="btn-group">
-        <button class="catagory">Cat1</button>
-        <button class="scoreboard-question-btn-led">1</button>
-        <button class="scoreboard-question-btn-led">2</button>
-        <button class="scoreboard-question-btn-led">3</button>
-        <button class="scoreboard-question-btn-led">4</button>
-      </div>
-
-      {/*Category 2*/}
-      <div class="btn-group">
-        <button class="catagory">Cat2</button>
-        <button class="scoreboard-question-btn-led">1</button>
-        <button class="scoreboard-question-btn-led">2</button>
-        <button class="scoreboard-question-btn-led">3</button>
-        <button class="scoreboard-question-btn-led">4</button>
-      </div>
-
-      {/*Category 3*/}
-      <div class="btn-group">
-        <button class="catagory">Cat3</button>
-        <button class="scoreboard-question-btn-led">1</button>
-        <button class="scoreboard-question-btn-led">2</button>
-        <button class="scoreboard-question-btn-led">3</button>
-        <button class="scoreboard-question-btn-led">4</button>
-      </div>
-
-      {/*Category 4*/}
-      <div class="btn-group">
-        <button class="catagory">Cat4</button>
-        <button class="scoreboard-question-btn-led">1</button>
-        <button class="scoreboard-question-btn-led">2</button>
-        <button class="scoreboard-question-btn-led">3</button>
-        <button class="scoreboard-question-btn-led">4</button>
-      </div>
-
-      {/*Category 5*/}
-      <div class="btn-group">
-        <button class="catagory">Cat5</button>
-        <button class="scoreboard-question-btn-led">1</button>
-        <button class="scoreboard-question-btn-led">2</button>
-        <button class="scoreboard-question-btn-led">3</button>
-        <button class="scoreboard-question-btn-led">4</button>
-      </div>
-    </div>{/*Player3-ScoreBoard-End*/}
-
-{/*<button id="demo" onclick="myFunction()"></button>*/}
-{/*======================= Score-Board END ======================*/}
-</div>{/*Bootstrap container ENDS*/}
-      {/**/}
-    </div>/*JSX React div ENDS*/
-    
+    </div>
   );
-          
 }
 
-
 export default Game;
-
-
