@@ -120,7 +120,10 @@ function Game(props) {
           </div>
         </div>
       ) : null}
+
     </div>
+
+      
   );
 }
 
