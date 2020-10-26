@@ -10,6 +10,8 @@ function Game(props) {
 
   const [answers, setAnswers] = useState("");
 
+  const [answers, setAnswers] = useState("");
+
   useEffect(() => {
     // console.log(playerName);
     if (timeLeft === 0) {
@@ -102,6 +104,7 @@ function Game(props) {
                 </button>
               </div>
               <div class="modal-body">{questiondata}</div>
+
               <button id="bttn" class="button">
                 {answers[0]}
               </button>
@@ -116,14 +119,26 @@ function Game(props) {
               </button>
 
               <div class="modal-footer"></div>
+
+              <button id="bttn" data-dismiss="modal" onClick={myFunction}>
+                {answers[0]}
+              </button>
+              <button id="bttn" data-dismiss="modal" onClick={myFunction}>
+                {answers[1]}
+              </button>
+              <button id="bttn" data-dismiss="modal" onClick={myFunction}>
+                {answers[2]}
+              </button>
+              <button id="bttn" data-dismiss="modal" onClick={myFunction}>
+                {answers[3]}
+              </button>
+
+              <div class="modal-footer"></div>
             </div>
           </div>
         </div>
       ) : null}
-
     </div>
-
-      
   );
 }
 
