@@ -8,7 +8,7 @@ class Home extends Component {
           Are you Ready to Play Jeopardy?
         </h2>
         <img
-          src="https://www.americamagazine.org/sites/default/files/main_image/America-jeopardy-2019.jpg"
+          src="https://i.ibb.co/pv4qznn/America-jeopardy-2019-web-app.png"
           height="370"
           alt="jeopardy tag"
         />
