@@ -9,10 +9,10 @@ function Game(props) {
   const [timeLeft, setTimeLeft] = useState(null);
   const playerName = props.location.playerName;
   const [score, setScore] = useState(0);
+  const [questionScore, setQuestionScore] = useState(0);
 
   const [answers, setAnswers] = useState([]);
   const [correctAnswer, setCorrectAnswer] = useState("");
-  const [questionScore, setQuestionScore] = useState(0);
 
   const [questionCount, setCount] = useState(0);
   const history = useHistory();
@@ -20,9 +20,9 @@ function Game(props) {
   useEffect(() => {
     // console.log(playerName);
     if (timeLeft === 0) {
-      console.log("TIME LEFT IS 0");
+      alert("TIMES UP");
       setTimeLeft(null);
-      setShowModal(false);
+      // setShowModal(false);
     }
 
     // exit early when we reach 0
@@ -91,7 +91,7 @@ function Game(props) {
 
       {showModal ? (
         <div
-          class="modal fade"
+          className="modal fade"
           id="exampleModal"
           tabindex="-1"
           role="dialog"
@@ -112,10 +112,12 @@ function Game(props) {
                   data-dismiss={answer === correctAnswer ? "modal" : null}
                   aria-label={answer === correctAnswer ? "modal" : null}
                   onClick={() => {
-                    if (answers === correctAnswer) {
-                      setShowModal(false);
+                    if (answer === correctAnswer) {
                       setScore(questionScore + score);
+                    } else if (answer !== correctAnswer) {
+                      setScore(questionScore - score);
                     }
+                    // console.log(setScore(questionScore + score));
                     setCount(questionCount + 1);
                     if (questionCount === questions.length) {
                       history.push("/highscores");
