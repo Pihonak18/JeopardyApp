@@ -4,7 +4,9 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <h2 className="p-3 mb-2 bg-primary text-white">
+        <h2 id="ready-banner" className="p-3 mb-2 bg-primary text-white ready-banner">
+        {/* <h2 id="ready-banner" className="p-3 mb-2 bg-primary text-white ready-banner"> */}
+        {/* <h2 id="ready-banner" className="text-white ready-banner"> */}
           Are you Ready to Play Jeopardy?
         </h2>
         <img
