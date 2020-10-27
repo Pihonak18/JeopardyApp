@@ -13,10 +13,9 @@ function Game(props) {
   const [answers, setAnswers] = useState([]);
   const [correctAnswer, setCorrectAnswer] = useState("");
   const [questionScore, setQuestionScore] = useState(0);
-
   const [questionCount, setCount] = useState(0);
-
   const history = useHistory();
+
   useEffect(() => {
     // console.log(playerName);
     if (timeLeft === 0) {
@@ -120,7 +119,7 @@ function Game(props) {
                   data-dismiss={answer === correctAnswer ? "modal" : null}
                   aria-label={answer === correctAnswer ? "modal" : null}
                   onClick={() => {
-                    if (answer === correctAnswer) {
+                    if (answers === correctAnswer) {
                       setShowModal(false);
                       setScore(questionScore + score);
                     }
