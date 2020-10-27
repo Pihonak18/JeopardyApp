@@ -13,6 +13,7 @@ function Game(props) {
   const [answers, setAnswers] = useState([]);
   const [correctAnswer, setCorrectAnswer] = useState("");
   const [questionScore, setQuestionScore] = useState(0);
+
   const [questionCount, setCount] = useState(0);
   const history = useHistory();
 
@@ -102,14 +103,6 @@ function Game(props) {
                 <h5 className="modal-title" id="exampleModalLabel">
                   {timeLeft} {questiontitle}
                 </h5>
-                <button
-                  type="button"
-                  className="close"
-                  data-dismiss="modal"
-                  aria-label="Close"
-                >
-                  <span aria-hidden="true">&times;</span>
-                </button>
               </div>
               <div class="modal-body">{questiondata}</div>
 
