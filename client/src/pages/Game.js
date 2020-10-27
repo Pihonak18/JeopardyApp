@@ -20,7 +20,7 @@ function Game(props) {
   useEffect(() => {
     // console.log(playerName);
     if (timeLeft === 0) {
-      alert("TIMES UP");
+      // alert("TIMES UP");
       setTimeLeft(null);
       // setShowModal(false);
     }
@@ -115,7 +115,7 @@ function Game(props) {
                     if (answer === correctAnswer) {
                       setScore(questionScore + score);
                     } else if (answer !== correctAnswer) {
-                      setScore(questionScore - score);
+                      setScore(score - questionScore);
                     }
                     // console.log(setScore(questionScore + score));
                     setCount(questionCount + 1);
