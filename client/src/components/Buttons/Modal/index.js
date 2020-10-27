@@ -7,7 +7,7 @@ function Modal() {
     <div>
       <button
         type="button"
-        class="btn btn-primary"
+        class="btn btn-outline-warning"
         data-toggle="modal"
         data-target=".bd-example-modal-sm"
       >
