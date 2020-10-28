@@ -8,88 +8,89 @@
     "id": 1
   },
   {
-    "question": "with the caption 'He and the boss took a chance.'",
-    "answer": "Jackie Robinson",
-    "answers":["Jackie Robinson", "Babe Ruth", "Reggie Jackson", "Cy Young"],
+    "question": "The rock and roll hall of fame is located in which U.S state?",
+    "answer": "Ohio",
+    "answers":["Idaho", "Colorado", "New York", "Ohio"],
     "score": 100,
     "wasClicked": false,
     "id": 2
   },
   {
-    "question": "He was featured on the September 22, 1947 cover of Time with the caption 'He and the boss took a chance.'",
-    "answer": "Jackie Robinson",
-    "answers": ["Jackie Robinson", "Derek Jeter", "Babe Ruth", "Cy Young"],
+    "question": "This famous quote is from what 80's movie?'Taste the soup, the soup tastes good?'",
+    "answer": "Coming to America",
+    "answers": ["The Sandlot", "Coming to America", "The Breakfast Club", "Rain Man"],
     "score": 100,
     "wasClicked": false,
     "id": 3
   },
   {
-    "question": "He was featured on the September 22, 1947 cover of Time with the caption 'He and the boss took a chance.'",
-    "answer": "Jackie Robinson",
-    "answers": ["Jackie Robinson", "Derek Jeter", "Babe Ruth", "Cy Young"],
+    "question": "How many years did the 100 years war last?",
+    "answer": "116",
+    "answers": ["100", "116", "112", "101"],
     "score": 100,
     "wasClicked": false,
     "id": 4
   },
   {
-    "question": "He was featured on the September 22, 1947 cover of Time with the caption 'He and the boss took a chance.'",
-    "answer": "Jackie Robinson",
+    "question": "How high are the NFL goal posts?",
+    "answer": "10 feet",
     "score": 300,
+    "answers": ["15 feet", "20 feet", "12 feet", "10 feet"],
     "wasClicked": false,
     "id": 5
   },
   {
-    "question": "He was featured on the September 22, 1947 cover of Time with the caption 'He and the boss took a chance.'",
-    "answer": "Jackie Robinson",
-    "answers": ["Jackie Robinson", "Derek Jeter", "Babe Ruth", "Cy Young"],
+    "question": "Who won American Idol season 1?",
+    "answer": "Kelly Clarkson",
+    "answers": ["Ruben Studdard", "Carrie Underwood", "Kelly Clarkson", "Simon Cowell"],
     "score": 300,
     "wasClicked": false,
     "id": 6
   },
   {
-    "question": "He was featured on the September 22, 1947 cover of Time with the caption 'He and the boss took a chance.'",
-    "answer": "Jackie Robinson",
-    "answers": ["Jackie Robinson", "Derek Jeter", "Babe Ruth", "Cy Young"],
+    "question": "In the James Bond movies, what is the name of Bonds assistant?",
+    "answer": "Miss Money Penny",
+    "answers": ["Miss Penny", "Q", "Miss Money Penny", "MUM"],
     "score": 300,
     "wasClicked": false,
     "id": 7
   },
   {
-    "question": "He was featured on the September 22, 1947 cover of Time with the caption 'He and the boss took a chance.'",
-    "answer": "Jackie Robinson",
-    "answers": ["Jackie Robinson", "Derek Jeter", "Babe Ruth", "Cy Young"],
+    "question": "One of the ancient wonders of the world, the 'Hanging Gardens', was found in what city?",
+    "answer": "Babylon",
+    "answers": ["Babylon", "Greece", "Rome", "Alexandria"],
     "score": 300,
     "wasClicked": false,
     "id": 8
   },
   {
-    "question": "He was featured on the September 22, 1947 cover of Time with the caption 'He and the boss took a chance.'",
-    "answer": "Jackie Robinson",
-    "answers": ["Jackie Robinson", "Derek Jeter", "Babe Ruth", "Cy Young"],
+    "question": "Who was the first player to win consecutive NBA MVP awards since Micheal Jordan did in 1991 and 1992?",
+    "answer": "Tim Duncan",
+    "answers": ["Magic Johnson", "Lebron James", "Kobe Bryant", "Tim Duncan"],
     "score": 600,
     "wasClicked": false,
     "id": 9
   },
   {
-    "question": "He was featured on the September 22, 1947 cover of Time with the caption 'He and the boss took a chance.'",
-    "answer": "Jackie Robinson",
-    "answers": ["Jackie Robinson", "Derek Jeter", "Babe Ruth", "Cy Young"],
+    "question": "R.Kelly's unforgettable 'I Believe I Can Fly, was originally featured on the soundtrack of which movie?",
+    "answer": "Space Jam",
+    "answers": ["Like Mike", "Home Alone", "The Truman Show", "Space Jam"],
     "score": 600,
     "wasClicked": false,
     "id": 10
   },
   {
-    "question": "He was featured on the September 22, 1947 cover of Time with the caption 'He and the boss took a chance.'",
-    "answer": "Jackie Robinson",
-    "answers": ["Jackie Robinson", "Derek Jeter", "Babe Ruth", "Cy Young"],
+    "question": "Which movie did actor Tom Hanks score his first Academy Awards nomination?",
+    "answer": "Big",
+    "answers": ["Saving Private Ryan", "Forrest Gump", "Big", "Cast Away"],
     "score": 600,
     "wasClicked": false,
     "id": 11
   },
   {
-    "question": "He was featured on the September 22, 1947 cover of Time with the caption 'He and the boss took a chance.'",
-    "answer": "Jackie Robinson",
-    "answers": ["Jackie Robinson", "Derek Jeter", "Babe Ruth", "Cy Young"],
+    "question": "In 1945 scientists in this state witnessed the detonation of the world's first atomic bomb?",
+    "answer": "The Red Cross",
+    "answers": ["The Red Cross", "Derek Jeter", "Babe Ruth", "Cy Young"],
     "score": 600,
     "wasClicked": false,
     "id": 12
@@ -105,6 +106,7 @@
   {
     "question": "He was featured on the September 22, 1947 cover of Time with the caption 'He and the boss took a chance.'",
     "answer": "Jackie Robinson",
+    "answers": ["Jackie Robinson", "Derek Jeter", "Babe Ruth", "Cy Young"],
     "score": 1000,
     "wasClicked": false,
     "id": 14
