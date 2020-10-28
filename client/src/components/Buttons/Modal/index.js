@@ -11,7 +11,7 @@ function Modal() {
         data-toggle="modal"
         data-target=".bd-example-modal-sm"
       >
-        Create Player!
+        Create Player and Start Playing!
       </button>
 
       <div
