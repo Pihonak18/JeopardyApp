@@ -92,3 +92,8 @@ background-size: cover;
 opacity:0.5!important;
 */
 }
+
+.scores-list {
+  color: gold;
+  background-color:	rgba(2, 117, 216, 0.5);
+}
