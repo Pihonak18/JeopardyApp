@@ -96,33 +96,33 @@
     "id": 12
   },
   {
-    "question": "He was featured on the September 22, 1947 cover of Time with the caption 'He and the boss took a chance.'",
-    "answer": "Jackie Robinson",
-    "answers": ["Jackie Robinson", "Derek Jeter", "Babe Ruth", "Cy Young"],
+    "question": "What team hired Matt Patricia as their head coach?",
+    "answer": "Detroit Lions",
+    "answers": ["Pittsburg Steelers", "New York Jets", "Chicago Bears", "Detroit Lions"],
     "score": 1000,
     "wasClicked": false,
     "id": 13
   },
   {
-    "question": "He was featured on the September 22, 1947 cover of Time with the caption 'He and the boss took a chance.'",
-    "answer": "Jackie Robinson",
-    "answers": ["Jackie Robinson", "Derek Jeter", "Babe Ruth", "Cy Young"],
+    "question": "International music sensation ABBA originated from which European Country?",
+    "answer": "Sweden",
+    "answers": ["Switzerland", "Sweden", "Norway", "Finland"],
     "score": 1000,
     "wasClicked": false,
     "id": 14
   },
   {
-    "question": "He was featured on the September 22, 1947 cover of Time with the caption 'He and the boss took a chance.'",
-    "answer": "Jackie Robinson",
-    "answers": ["Jackie Robinson", "Derek Jeter", "Babe Ruth", "Cy Young"],
+    "question": "What 1927 musical was the first 'talkie'?",
+    "answer": "The Jazz Singer",
+    "answers": ["Golden Dawn", "Sally", "Show Girl in Hollywood", "The Jazz Singer"],
     "score": 1000,
     "wasClicked": false,
     "id": 15
   },
   {
-    "question": "He was featured on the September 22, 1947 cover of Time with the caption 'He and the boss took a chance.'",
-    "answer": "Jackie Robinson",
-    "answers": ["Jackie Robinson", "Derek Jeter", "Babe Ruth", "Cy Young"],
+    "question": "How many days was William Harrison president of the United States?",
+    "answer": "32",
+    "answers": ["30", "32", "28", "31"],
     "score": 1000,
     "wasClicked": false,
     "id": 16
