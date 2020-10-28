@@ -109,8 +109,16 @@ function Game(props) {
               {answers.map((answer) => (
                 <button
                   key={answer}
-                  data-dismiss={answer === correctAnswer ? "modal" : null}
-                  aria-label={answer === correctAnswer ? "modal" : null}
+                  data-dismiss={
+                    answer === correctAnswer || answer !== correctAnswer
+                      ? "modal"
+                      : null
+                  }
+                  aria-label={
+                    answer === correctAnswer || answer !== correctAnswer
+                      ? "modal"
+                      : null
+                  }
                   onClick={() => {
                     if (answer === correctAnswer) {
                       setScore(questionScore + score);
