@@ -8,6 +8,11 @@ body {
   background-size: cover;
 }
 
+.hexagons {
+  background-image: url("https://image.freepik.com/free-vector/abstract-hexagonal-background_43605-1545.jpg");
+  background-size: cover;
+}
+
 .game-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -96,4 +101,14 @@ opacity:0.5!important;
 .scores-list {
   color: gold;
   background-color:	rgba(2, 117, 216, 0.5);
+}
+
+.jumbotron {
+  background-image: url("https://image.freepik.com/free-vector/");
+  background-size: cover;
+}
+
+#about {
+  background-image: url("https://image.freepik.com/free-vector/");
+  background-size: cover; 
 }
