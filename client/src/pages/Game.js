@@ -4,6 +4,7 @@ import questions from "./questions.json";
 
 function Game(props) {
   const [showModal, setShowModal] = useState(true);
+
   const [questiondata, setQuestion] = useState("");
   const [questiontitle, setTitle] = useState("");
   const [timeLeft, setTimeLeft] = useState(null);
