@@ -3,7 +3,7 @@ const playersScores = require("../../controllers/playersScores");
 
 router.route("/").get(playersScores.findAll);
 
-router.post(playersScores.create);
+router.route("/").post(playersScores.create);
 //if previous user then update
 //upsert
 

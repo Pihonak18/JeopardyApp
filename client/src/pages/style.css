@@ -47,8 +47,6 @@ body {
   border-color: black;
 }
 
-
-
 .title-category {
   color: white;
   background-color: black;
@@ -76,15 +74,12 @@ div.card-group {
   background-color: rgb(138, 133, 65, 0.75);
   min-width: 3rem;
   min-height: 1rem;
-};
+}
 
 .scoreboard-title {
-  color: rgb(90,89,89);
-};
+  color: rgb(90, 89, 89);
+}
 
-
-.highscoresh1{
+.highscoresh1 {
   color: rgba(0, 4, 255, 0.5);
-};
-
-
+}
