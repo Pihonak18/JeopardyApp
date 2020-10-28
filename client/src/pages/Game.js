@@ -127,7 +127,7 @@ function Game(props) {
                       setScore(score - questionScore);
                     }
                     // console.log(setScore(questionScore + score));
-                    setCount(questionCount + 1);
+                    setCount(questionCount);
                     if (questionCount === questions.length) {
                       history.push("/highscores");
                     }
