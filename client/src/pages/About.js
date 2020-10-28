@@ -5,10 +5,10 @@ import "./about.css";
 
 function About() {
   return (
-    <div class="container-fluid mycontainer">
+    <div id="about" class="container-fluid mycontainer">
       <div className="jumbotron">
         <h1 className="display-4">About</h1>
-        <hr className="my-4" />
+        <hr className="my-4 hexagons" />
         <div className="about-wrapper">
           <h1 className="h1-intro">Introduction</h1>
           <p className="intro-p-tag text-box">
